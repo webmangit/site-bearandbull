@@ -1,0 +1,163 @@
+.form {
+    @media (min-width: 640px) {
+        background: linear-gradient(to right, #5A33E2 50%, #1C182E 50%);
+    }
+    * {
+        outline: none;
+    }
+    // .form__container 
+    &__container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        @media (min-width: 640px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-self: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            @include adaptive-value("padding-top", 70, 35);
+            @include adaptive-value("padding-bottom", 70, 35);   
+        }
+    }
+    // .form__block-1
+    &__block-1 {
+        background-color: #5A33E2;
+        @include adaptive-value("padding-top", 70, 35);
+        @include adaptive-value("padding-bottom", 70, 35);  
+        @media (min-width: 640px) {
+            background-color: transparent;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin-right: $mediumIndent + px;
+        }
+    }
+    // .form__block-2
+    &__block-2 {
+        background-color: #1C182E;
+        @include adaptive-value("padding-top", 70, 35);
+        @include adaptive-value("padding-bottom", 70, 35);  
+        @media (min-width: 640px) {
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    }
+    // .form__content
+    &__content {
+        display: grid;
+        gap: $mediumIndent + px;
+    }
+    // .form__subtitle
+    &__subtitle {
+        font-size: $smallText + px;
+    }
+    // .form__item
+    &__item {
+        margin-bottom: $smallIndent + px;
+    }
+    // .form__input
+    &__input {
+        height: 60px;
+        padding: 0px 20px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: $smallText + px;
+    }
+    // .form__or
+    &__or {
+        font-size: $smallText + px;
+    }
+    // .form__button
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        min-height: 60px;
+        font-weight: 500;
+        border-radius: 8px;
+        background: linear-gradient(94.62deg, $addColorOne 17.38%, $addColorTwo 101.12%), #FFFFFF;
+        box-shadow: 0px 5px 15px #8E2531;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: all 0.5s cubic-bezier(0.68, -0.75, 0.265, 1.55) 0s;
+        @media (min-width: 640px) {
+            width: auto;
+            padding: 21px 22px;
+        }
+    }
+    &__button:hover {
+        transform: scale(1.1);
+    }
+    // .form__steps
+    &__steps {
+        display: grid;
+        @include adaptive-value("gap", 40, 20); 
+    }
+    // .form__step
+    &__step {
+        display: flex;
+        align-items: center;
+    }
+    // .form__step-icon
+    &__step-icon {
+        margin-right: $mediumIndent + px;
+        @media (min-width: 640px) {
+            margin-left: $mediumIndent + px;
+        }
+    }
+    // .form__step-text
+    &__step-text {
+        @include adaptive-value("font-size", 24, 18); 
+        font-weight: 700;
+        line-height: 120%;
+    }
+}
+
+.checkbox {
+    padding: 10px 0px;
+    &__input {
+        display: none;
+    }
+    &__label {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        font-size: $smallText + px;
+    }
+    &__label::before {
+        content: "";
+        align-self: flex-start;
+        flex: 0 0 23px;
+        height: 23px;
+        margin-right: $smallIndent + px;
+        background-color: #5A33E2;
+        border: 1px solid #FFFFFF;
+        border-radius: 4px;
+    }
+    &__label::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 11px;
+        height: 11px;
+        border-radius: 2px;
+        background-color: #FFFFFF;
+        transform: scale(0);
+        transition: transform 0.3s ease 0s;
+    }
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+    transform: scale(1);
+}
+
+
+
+

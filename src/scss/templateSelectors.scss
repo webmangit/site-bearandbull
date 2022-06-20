@@ -1,0 +1,49 @@
+// Шаблонный селектор для адаптива медиа-ресурсов
+%adaptive-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// Шаблонный селектор для создания карточки робота
+%card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include adaptive-value("padding-top", $bigIndent, $mediumIndent);
+    @include adaptive-value("padding-bottom", $bigIndent, $mediumIndent);
+    padding-right: $regularIndent + px;
+    padding-left: $regularIndent + px;        
+    border-radius: 5px;
+    background-color: #141121;
+    border: 2px solid #9787FD;
+    cursor: pointer;
+}
+
+// Шаблонный селектор для создания grid-сетки для 3 колонок
+%grid-3 {
+    display: grid;
+    @include adaptive-value("gap", $bigIndent, $regularIndent);
+    @media (min-width: 640px) {
+        grid-template: 1fr auto / repeat(2, 1fr);
+    }
+    @media (min-width: 900px) {
+        grid-template: 1fr / repeat(3, 1fr);
+    }
+}
+
+// Шаблонный селектор для определения поведения 3 колонки в 3-колоночной сетке
+%grid-3-3 {
+    @media (min-width: 640px) {
+        grid-column-start: span 2;
+    }
+    @media (min-width: 900px) {
+        grid-column-start: auto;
+    }
+}
+
+

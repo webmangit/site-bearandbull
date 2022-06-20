@@ -1,0 +1,1190 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'templateSelectors';
+@import 'null';
+@import 'settings';
+@import 'blocksForBEM';
+
+
+// Компонент HEADER ---------------------------------------------------------------------------
+@import 'components/header';
+
+// ! PAGE: main
+// Секция INTRO -------------------------------------------------------------------------------
+
+.intro {
+    @media (min-width: 640px) {
+        background: url('../img/bearandbull.svg');
+        background-size: auto 100%;
+        background-position: 50% 0;
+        background-repeat: no-repeat;
+    }
+
+    &__container {
+        @include adaptive-value("padding-top", 70, 35);
+        @include adaptive-value("padding-bottom", 70, 35);
+        @media (min-width: 640px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__main-block {
+        @media (min-width: 640px) {
+            align-self: center;
+        }
+    }
+    &__title {
+        margin-bottom: $mediumIndent + px;
+    }
+    &__description {
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+    }
+    &__text {
+        @include adaptive-value("margin-bottom", $mediumIndent, $regularIndent);
+        span {
+            @include adaptive-value("font-size", $mediumFS, $regularFS);
+            font-weight: 700;
+            background: linear-gradient(94.62deg, $addColorOne 17.38%, $addColorTwo 101.12%), #FFFFFF;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: $addColorOne;
+            text-shadow: 0px 5px 15px #8E2531;
+        }
+    }
+    &__feedback {
+        display: inline-block;
+        margin-bottom: 30px;
+        @media (max-width: 640px) {
+            min-width: 100%;
+            justify-content: center;
+        }
+        @media (min-width: 1084px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__button {
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+        @media (max-width: 640px) {
+            min-width: 100%;
+            justify-content: center;
+        }
+        @media (min-width: 1084px) {
+            margin-bottom: 0px;
+            margin-right: 30px;
+        }
+    }
+    &__consultation {
+        text-align: center;
+        color: #B6B6B6;
+    }
+    &__consultation:hover {
+        text-decoration: underline;
+    }
+    &__media-block {
+        text-align: center;
+       
+    }
+    &__media-body {
+        display: inline-flex;
+        position: relative;
+        z-index: 3;
+    }
+    &__media-phone {
+        img {
+            position: relative;
+        } 
+    }
+    &__media-gif {
+        position: absolute;
+        top: 40px;
+        left: 11px;
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+            width: 209.1px;
+        }   
+    }
+    &__decore-circle {
+        position: absolute;
+        z-index: -1;
+        width: 186px;
+        height: 400px;
+        top: 50px;
+        right: 23px;
+        background-color: #5A33E2;
+        filter: blur(82px);
+    }
+}
+// Секция ADVANTAGES --------------------------------------------------------------------------
+.advantages {
+    //.advantages__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    //.advantages__body
+    &__body {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $regularIndent);
+        @media (min-width: 640px) {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        }
+        @media (min-width: 1034px) {
+            grid-template: 1fr / repeat(4, 1fr);
+        }
+    }
+    //.advantages__column
+    &__column {
+        text-align: center;
+        border-radius: 10px;
+        background-color: #1c182e;
+        border: 1px solid #23222B;
+        @media (min-width: 900px) {
+            background-color: $mainBGColor;
+            transition: all 0.8s ease 0s;
+        }
+    }
+    &__column:hover {
+        @media (min-width: 900px) {
+            background-color: #1c182e;
+        }
+    }
+    //.advantages__item
+    &__item {
+        @include adaptive-value("padding", 30, 20); 
+    }
+
+    &__item_position {
+        position: relative;
+    }
+
+    //.advantages__item-icon
+    &__item-icon {
+        margin-bottom: $mediumIndent + px;
+        img {
+            height: 106px;
+        }
+    }
+    //.advantages__item-text
+    &__item-text {
+        font-weight: 500;
+    }
+
+    &__decore-circle-1 {
+        width: 74px;
+        height: 74px;
+        bottom: -60px;
+        left: -70px;
+        filter: blur(20px);
+    }
+    &__decore-circle-2 {
+        width: 74px;
+        height: 74px;
+        top: -70px;
+        right: -40px;
+        filter: blur(20px);
+    }
+}
+// Секция START -------------------------------------------------------------------------------
+.start {
+    //.start__wrapper
+    &__wrapper{
+        position: relative;
+    }
+    //.start__content
+    &__content {
+        @include adaptive-value("padding-top", 50, 20); 
+        @include adaptive-value("padding-bottom", 50, 20); 
+        @include adaptive-value("padding-left", 100, 15); 
+        @include adaptive-value("padding-right", 100, 15); 
+        border-radius: 20px;
+        background-color: $mainColorTwo;
+    }
+    //.start__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    //.start__body
+    &__body {
+        position: relative;
+        display: grid;
+        @include adaptive-value("row-gap", $bigIndent, $mediumIndent);
+        @include adaptive-value("column-gap", 60, $mediumIndent); 
+        @media (min-width: 900px) {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        }
+    }
+    //.start__item
+    &__item {
+        padding-left: 26px;
+    }
+    &__item:last-child {
+        padding-left: 0px;
+        @media (max-width: 900px) {
+            margin-bottom: $smallIndent + px;
+        }
+    }
+    //.start__title-last
+    &__item-last {
+        padding-left: 26px;
+    }
+    // .start__decore-circle-1
+    &__decore-circle-1 {
+        width: 269px;
+        height: 269px;
+        top: 16px;
+        left: -109px;
+        filter: blur(40px);
+    }
+    // .start__decore-circle-2
+    &__decore-circle-2 {
+        width: 126px;
+        height: 126px;
+        bottom: -5px;
+        right: -52px;
+        filter: blur(30px);
+    }   
+}
+// Секция ABOUT -------------------------------------------------------------------------------
+.about {
+    //.about__container
+    &__container {
+        @media (min-width: 900px) {
+            display: grid;
+            gap: $mediumIndent + px;
+            grid-template: auto 1fr/ 60% 40%;
+        }
+    }
+    //.about__logo
+    &__logo {
+        margin-bottom: $mediumIndent + px;
+        img {
+            height: 37px;
+            @include adaptive-value("height", 66, 37);
+        }
+    }
+    //.about__title
+    &__title {
+        position: relative;
+        @media (min-width: 900px) {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+    }
+    //.about__text
+    &__text {
+        margin-bottom: $mediumIndent + px;
+    }
+    //.about__subtitle
+    &__subtitle {
+        margin-bottom: $mediumIndent + px;
+    }
+    //.about__body
+    &__body {
+        position: relative;
+        @media (min-width: 900px) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+    }
+    //.about__item
+    &__item {
+        display: flex;
+        @include adaptive-value("margin-bottom", $mediumIndent, regularIndent);
+        
+    }
+    &__item:last-child {
+        margin-bottom: 0px;
+    }
+    //.about__item-icon
+    &__item-icon {
+        margin-right: $regularIndent + px;
+        img {
+            @include adaptive-value("height", 35, 25);
+        }
+    }
+
+    &__decore-circle-1 {
+        width: 94px;
+        height: 94px;
+        top: 40%;
+        left: -47px;
+        filter: blur(30px);
+    }
+    &__decore-circle-2 {
+        width: 157px;
+        height: 157px;
+        top: 30%;
+        right: 10%;
+        filter: blur(40px);
+    }
+}
+// Секция INTEREST ----------------------------------------------------------------------------
+.interest {
+    //.interest__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+        position: relative;
+        z-index: 100;
+    }
+    //.interest__body
+    &__body {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $regularIndent);
+        @media (min-width: 900px) {
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        }
+    }
+    //.interest__column
+    &__column {
+        border-radius: 10px;
+        background-color: #1c182e;
+        border: 1px solid #23222B;
+        position: relative;
+    }
+    //.interest__item
+    &__item {
+        @include adaptive-value("padding-left", 30, 15);
+        @include adaptive-value("padding-right", 30, 15);
+        @include adaptive-value("padding-top", 40, 20);
+    }
+    //.interest__item-text
+    &__item-text {
+        margin-bottom: $mediumIndent + px;
+        @media (min-width: 900px) {
+            max-width: 360px;
+        }
+    }
+    //.interest__button
+    &__button {
+        margin-bottom: 60px;
+        position: relative;
+        z-index: 10;
+    }
+    //.interest__icon
+    &__icon {
+        position: absolute;
+        bottom: -1px;
+        right: 22px;
+        img {
+            width: 120px;
+            @media (min-width: 900px) {
+                width: 140px;
+            }
+        }
+    }
+    //.interest__icon_add
+    &__icon_add {
+        right: 6px;
+        img {
+            width: 136px;
+            @media (min-width: 900px) {
+                width: 158px;
+            }
+        }
+    }
+
+    &__decore-circle-1 {
+        width: 94px;
+        height: 94px;
+        top: -30px;
+        left: -30px;
+        filter: blur(30px);
+    }
+    &__decore-circle-2 {
+        width: 94px;
+        height: 94px;
+        bottom: -31px;
+        left: 50%;
+        filter: blur(30px);
+    }
+}
+// Секция ROBOTS ------------------------------------------------------------------------------
+.robots {
+    //.robots__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, 30);
+    }
+    //.robots__title-text
+    &__title-text{
+        margin-bottom: $mediumIndent + px;
+    }
+
+    &__wrapper {
+        @media (min-width: 900px) {
+            flex: 1 1 auto;
+        }
+    }
+    // -------------------->
+    //.robots__variants
+    &__variants {
+        @include adaptive-value("margin-bottom", $bigIndent, 30);
+    }
+    //.robots__variants-title
+    &__variants-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $mediumIndent + px;
+        h3 {
+            font-weight: 700;
+            @include adaptive-value("font-size", $mediumFS, $regularFS);
+            line-height: 120%;
+        }
+    }
+    //.robots__variants-body
+    &__variants-body {
+        @extend %grid-3;
+        @media (max-width: 900px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__variants-item {
+        position: relative;
+    }
+    //.robots__variants-item_3
+    &__variants-item_3 {
+        @extend %grid-3-3;
+    }
+    //.robots__variants-all
+    &__variants-all {
+        text-align: center;
+        font-size: $regularFS + px;
+        color: #B6B6B6;
+    }
+    &__variants-all:hover {
+        text-decoration: underline;
+    }
+    // <--------------------
+    // -------------------->
+    //.robots__offer
+    &__offer {
+        @include adaptive-value("margin-bottom", 90, 45);
+    }
+    //.robots__offer-title
+    &__offer-title {
+        margin-bottom: $mediumIndent + px;
+        h3 {
+            font-weight: 700;
+            @include adaptive-value("font-size", $mediumFS, $regularFS);
+            line-height: 120%;
+        }
+    }
+    //.robots__offer-body
+    &__offer-body {
+        @extend %grid-3;
+    }
+    //.robots__offer-item
+    &__offer-item {
+        @extend %card;
+        position: relative;
+    }
+    //.robots__offer-item_3
+    &__offer-item_3 {
+        @extend %grid-3-3;
+    }
+    //.robots__offer-item-title
+    &__offer-item-title {
+        @include adaptive-value("font-size", 22, $regularFS);
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: $smallIndent + px;
+    }
+    //.robots__offer-item-subtitle
+    &__offer-item-subtitle {
+        margin-bottom: $smallIndent + px;
+        font-size: $smallText + px;
+        color: #B6B6B6;
+    }
+    //.robots__offer-item-description
+    &__offer-item-description {
+        
+        margin-bottom: $smallIndent + px;
+        div {
+            font-size: $smallText + px;
+            color: #B6B6B6;
+        }
+    }
+    //.robots__offer-item-conclusion
+    &__offer-item-conclusion {
+        font-size: $smallText + px;
+        font-weight: 600;
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+        max-width: 320px
+    }
+    //.robots__offer-item-button
+    &__offer-item-button {}
+    // <--------------------
+    // -------------------->
+    //.robots__result
+    &__result {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $mediumIndent);
+        @media (min-width: 900px) {
+            grid-template: 1fr / 1fr 1fr;
+        }
+    }
+    //.robots__result-item
+    &__result-item {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    &__result-item:last-child {
+        margin-bottom: 0px;
+    }
+    //.robots__result-icons
+    &__result-icons {
+        min-height: 228px;
+        position: relative;
+    }
+    //.robots__result-icon
+    &__result-icon {
+        position: absolute;
+        transition: all 0.5s ease 0s;
+        img {
+            @include adaptive-value("height", 113, 56);
+        }
+    }
+    &__result-icon:hover {
+        transform: scale(1.2);
+    }
+    &__result-icon_1 { top: 8%; left: 0;}
+    &__result-icon_2 { top: 0; left: 40%;}
+    &__result-icon_3 { top: 4%; right: 0;}
+    &__result-icon_4 { top: 45%; left: 10%;}
+    &__result-icon_5 { top: 35%; right: 15%;}
+    &__result-icon_6 { bottom: 4%; left: 0;}
+    &__result-icon_7 { bottom: 0; left: 35%;}
+    &__result-icon_8 { bottom: 0; right: 0;}
+    @media (min-width: 320px) {
+        &__result-icon_4 { top: 45%; left: 15%;}
+        &__result-icon_5 { top: 35%; right: 25%;}
+        &__result-icon_7 { bottom: 0; left: 45%;}
+    }
+    @media (min-width: 900px) {
+        &__result-icon_4 { top: 45%; left: 15%;}
+        &__result-icon_5 { top: 35%; right: 20%;}
+        &__result-icon_7 { bottom: 0; left: 40%;}
+        &__result-icon_8 { bottom: 8%; right: 0;}
+    }
+
+    &__decore-circle-1 {
+        width: 269px;
+        height: 269px;
+        top: 15%;
+        left: -100px;
+        filter: blur(40px);
+    }
+    &__decore-circle-2 {
+        width: 126px;
+        height: 126px;
+        bottom: 10%;
+        right: -50px;
+        filter: blur(30px);
+    }
+    &__decore-circle-3 {
+        width: 324px;
+        height: 324px;
+        top: -113px;
+        left: -112px;
+        filter: blur(50px);
+    }
+    &__decore-circle-4 {
+        width: 126px;
+        height: 126px;
+        top: 15%;
+        left: -27px;
+        filter: blur(30px);
+    }
+    &__decore-circle-5 {
+        width: 269px;
+        height: 269px;
+        bottom: 0;
+        right: -36px;
+        filter: blur(40px);
+    }
+    &__decore-circle-6 {
+        width: 72px;
+        height: 72px;
+        top: -20px;
+        left: -30px;
+        filter: blur(30px);
+    }
+    &__decore-circle-7 {
+        width: 197px;
+        height: 197px;
+        bottom: -108px;
+        left: -45px;
+        filter: blur(40px);
+    }
+}
+// Секция STEPS -------------------------------------------------------------------------------
+.steps {
+    //.steps__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    //.steps__wrapper
+    &__wrapper {
+        display: flex;
+        @media (min-width: 640px) {
+            display: block;
+        }   
+    }
+    //.steps__body
+    &__body {
+        display: grid;
+        @include adaptive-value("gap", 30, 20);
+        margin-right: 20px;
+        @media (min-width: 640px) {
+            grid-template-columns: 1fr 1fr;
+            margin-right: 0;
+        }
+    }
+    //.steps__item
+    &__item {
+        display: flex;  
+    }
+    //.steps__item-icon
+    &__item-icon {
+        margin-right: $regularIndent + px;
+        img {
+            @include adaptive-value("height", 35, 25);
+        }
+    }
+    //.steps__item-text
+    &__item-text {
+        @media (min-width: 640px) {
+            max-width: 200px;
+        }
+        @media (min-width: 900px) {
+            max-width: 260px;
+        }
+    }
+
+    @media (min-width: 640px) {
+        &__item-1 {order: 1;}
+        &__item-2 {order: 4; justify-self: end;}
+        &__item-3 {order: 2;}
+        &__item-4 {order: 5; justify-self: end;}
+    }
+    
+    //.steps__item-decor
+    &__decor {
+        border-radius: 62px;
+        min-width: 15px;
+        min-height: 100%;
+        background: linear-gradient(180deg, #FE8603 0%, #E32E7F 100%), #FFFFFF;
+        
+        @media (min-width: 640px) {
+            height: 15px;
+            width: 100%;
+            background: linear-gradient(91.7deg, #FE8603 49%, #E32E7F 80.16%), #FFFFFF;
+            grid-column-start: span 2;
+            order: 3;
+        }
+    }
+}
+// Секция PROPERTY ----------------------------------------------------------------------------
+.property {
+    //.property__title
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    //.property__body
+    &__body {
+        @extend %grid-3;
+    }
+    //.property__column
+    &__column {
+        text-align: center;
+        border-radius: 10px;
+        background-color: #1c182e;
+        border: 1px solid #23222B;
+        @media (min-width: 900px) {
+            background-color: $mainBGColor;
+            transition: all 0.8s ease 0s;
+        }
+    }
+    &__column:hover {
+        @media (min-width: 900px) {
+            background-color: #1c182e;
+        }
+    }
+    //.property__column_3
+    &__column_3 {
+        @extend %grid-3-3;
+    }
+    //.property__item
+    &__item {
+        @include adaptive-value("padding", 30, 20);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    //.property__item-icon
+    &__item-icon {
+        margin-bottom: $mediumIndent + px;
+        img {
+            height: 74px;
+        }
+    }
+    //.property__item-text
+    &__item-text {
+        font-weight: 500;
+    }
+}
+// Секция REFERRAL ----------------------------------------------------------------------------
+.referral {
+    //.steps__container
+    &__container {
+        @media (min-width: 900px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: $bigIndent + px;
+        }
+    }
+    //.steps__title
+    &__title {
+        margin-bottom: $mediumIndent + px;
+    }
+    //.steps__description
+    &__description {
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+    }
+    //.steps__text
+    &__text {
+        @include adaptive-value("margin-bottom", $mediumIndent, $regularIndent);
+    }
+    //.steps__button
+    &__button {
+        margin-bottom: 60px;
+        @media (max-width: 420px) {
+            min-width: 100%;
+            justify-content: center;
+        }
+        @media (min-width: 900px) {
+            margin-bottom: 0;
+        }
+    }
+    //.steps__icons-body
+    &__icons-body {
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+    }
+    //.steps__icons
+    &__icons {
+        display: inline-block;
+        position: relative;
+    }
+    //.steps__main-icon
+    &__main-icon {
+        img {
+            @include adaptive-value("height", 352, 197);
+        }
+    }
+    //.steps__icon-1
+    &__icon-1 {
+        position: absolute;
+        @include adaptive-value("top", -50, -30);
+        @include adaptive-value("left", -50, -30);
+        img {
+            @include adaptive-value("height", 87, 50);
+        }
+    }
+    //.steps__icon-2
+    &__icon-2 {
+        position: absolute;
+        bottom: -20px;
+        left: -10px;
+        img {
+            @include adaptive-value("height", 53, 31);
+        }
+    }
+    //.steps__icon-3
+    &__icon-3 {
+        position: absolute;
+        top: 0;
+        right: -30px;
+        img {
+            @include adaptive-value("height", 53, 31);
+        }
+    }
+}
+// Компонент FORM -----------------------------------------------------------------------------
+@import 'components/form';
+
+
+// ! PAGE: robots
+// Секция ALL-ROBOTS --------------------------------------------------------------------------
+.all-robots {
+    &__subtitles {
+        max-width: 470px;
+    }
+    &__body {
+        @extend %grid-3;
+    }
+}
+
+// ! PAGE: faq
+// Компонент SPOLLER ---------------------------------------------------------------------------
+@import 'components/spoller';
+
+
+// ! PAGE: info
+// Секция INFO-INTRO --------------------------------------------------------------------------
+.info-intro {
+    // .info-intro__subtitles
+    &__subtitles {
+        max-width: 588px;
+    }
+}
+// Секция INFO-VIDEO --------------------------------------------------------------------------
+.info-video {
+    // .info-video__title
+    &__title {
+        min-width: 100%;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    // .info-video__items
+    &__items {
+        @extend %grid-3;
+    }
+    // .info-video__item
+    &__item {
+        position: relative;
+        padding: 0px 0px 55% 0px;
+        iframe {
+            @extend %adaptive-media;
+        }
+    }
+}
+// Секция INFO-ARTICLES -----------------------------------------------------------------------
+.info-articles {
+    // .info-articles__title
+    &__title {
+        min-width: 100%;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    // .info-articles__items
+    &__items {
+        @extend %grid-3;
+    }
+    // .info-articles__item
+    &__item {
+        display: inline-flex;
+        flex-direction: column;
+        @include adaptive-value("padding-left", 30, 15);
+        @include adaptive-value("padding-right", 30, 15);
+        @include adaptive-value("padding-top", 30, 20);
+        @include adaptive-value("padding-bottom", 30, 20);
+        background: #141121;
+        border: 2px solid #9787FD;
+        border-radius: 5px;
+    }
+    // .info-articles__title
+    &__item-title {
+        flex: 1 1 auto;
+        margin-bottom: 8px;
+        margin-bottom: $mediumIndent + px;
+        @include adaptive-value("font-size", 20, $regularFS);
+        font-weight: 700;
+        line-height: 120%;
+    }
+    // .info-articles__button
+    &__button {
+        align-self: flex-start;
+    }
+}
+// Секция INFO-BOOKS --------------------------------------------------------------------------
+.info-books {
+    // .info-books__title
+    &__title {
+        min-width: 100%;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    // .info-books__items
+    &__items {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $regularIndent);
+        @media (min-width: 640px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    // .info-books__item
+    &__item {
+        @include adaptive-value("padding-left", 30, 15);
+        @include adaptive-value("padding-right", 30, 15);
+        @include adaptive-value("padding-top", 30, 20);
+        @include adaptive-value("padding-bottom", 30, 30);
+        background-color: #1C182E;
+        border-radius: 8px;
+        text-align: center;
+        @media (min-width: 640px) {
+            display: flex;
+            text-align: start;
+        }
+    }
+    // .info-books__item-img
+    &__item-img {
+        margin-bottom: $regularIndent + px;
+        @media (min-width: 640px) {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+    }
+    // .info-books__item-author
+    &__item-author {
+        margin-bottom: $smallIndent + px;
+        font-size: 16px;
+    }
+    // .info-books__item-name
+    &__item-name {
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+// ! PAGE: aboutus
+// Секция ABOUTUS-INTRO -----------------------------------------------------------------------
+.aboutus-intro {
+    &__subtitles {
+        max-width: 524px;
+    }
+}
+// Секция ABOUTUS-WAYS ------------------------------------------------------------------------
+.aboutus-ways {
+    // .aboutus-ways__title
+    &__title {
+        margin: 0 auto;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    // .aboutus-ways__wrapper
+    &__wrapper {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $regularIndent);
+        @media (min-width: 900px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    // .aboutus-ways__block
+    &__block {
+        @include adaptive-value("padding-top", 40, 20); 
+        @include adaptive-value("padding-bottom", 40, 20); 
+        @include adaptive-value("padding-left", 30, 15); 
+        @include adaptive-value("padding-right", 30, 15); 
+        background-color: $mainColorTwo;
+        border-radius: 8px;
+    }
+    // .aboutus-ways__block-title
+    &__block-title {
+        @include adaptive-value("font-size", 26, 20);
+        font-weight: 700;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    // .aboutus-ways__block-body
+    &__block-body {
+        display: grid;
+        gap: $mediumIndent + px;
+    }
+
+}
+// Блок ABOUTUS-QUESTION ----------------------------------------------------------------------
+.aboutus-question {
+    position: relative;
+    @include adaptive-value("padding-top", 240, 140);
+    @include adaptive-value("padding-bottom", 240, 140);
+    &__text {
+        @include adaptive-value("font-size", 80, $mediumFS);
+        font-weight: 700;
+        text-align: center;
+    }
+    &__decore-circle-1 {
+        @include adaptive-value("width", 400, 150);
+        @include adaptive-value("height", 400, 150);
+        top: 50%;
+        left: 26%;
+        transform: translate(-26%, -50%);
+        filter: blur(40px);
+    }
+    &__decore-circle-2 {
+        @include adaptive-value("width", 400, 150);
+        @include adaptive-value("height", 400, 150);
+        top: 50%;
+        left: 74%;
+        transform: translate(-74%, -50%);
+        filter: blur(40px);
+    }
+}
+// Секция ABOUTUS-BEGIN ------------------------------------------------------------------------
+.aboutus-begin {
+    // .aboutus-begin__container
+    &__container {
+        display: grid;
+        @include adaptive-value("gap", $bigIndent, $regularIndent);
+        @media (min-width: 640px) {
+            grid-template: auto auto / 1fr 1fr;
+        }
+    }
+    // .aboutus-begin__wrapper
+    &__wrapper {
+        position: relative;
+    }
+    // .aboutus-begin__wrapper_1
+    &__wrapper_1 {
+        @media (min-width: 640px) {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+    }
+    // .aboutus-begin__wrapper_2
+    &__wrapper_2 {
+        @media (min-width: 640px) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+    }
+    // .aboutus-begin__title
+    &__title {
+        margin-bottom: $mediumIndent + px;
+    }
+    // .aboutus-begin__item
+    &__item {
+        display: grid;
+        gap: $mediumIndent + px;
+    }
+
+    &__decore-circle-1 {
+        width: 94px;
+        height: 94px;
+        top: -20px;
+        left: -30px;
+        filter: blur(30px);
+    }
+    &__decore-circle-2 {
+        width: 117px;
+        height: 117px;
+        bottom: -93px;
+        right: -99px;
+        filter: blur(30px);
+    }
+}
+// Секция ABOUTUS-STATISTICS ------------------------------------------------------------------------
+.aboutus-statistics {
+    display: grid;
+    gap: 30px;
+    @media (min-width: 500px) {
+        grid-template: repeat(3, auto) / repeat(2, 1fr) ;
+    }
+    @media (min-width: 1000px) {
+        grid-template: repeat(2, auto) / repeat(4, 1fr) ;
+    }
+    // .aboutus-statistics__item
+    &__item {
+        text-align: center; 
+    }
+    // .aboutus-statistics__item_1
+    &__item_1 {
+        @media (min-width: 1000px) {
+            grid-column: 1 / 2;
+        }
+    }
+    // .aboutus-statistics__item_2
+    &__item_2 {
+        @media (min-width: 1000px) {
+            grid-column: 2 / 4;
+        }
+    }
+    // .aboutus-statistics__item_3
+    &__item_3 {
+        @media (min-width: 1000px) {
+            grid-column: 4 / 5;
+        }
+    }
+    // .aboutus-statistics__item_4
+    &__item_4 {
+        @media (min-width: 1000px) {
+            grid-column: 1 / 3;
+        }
+    }
+    // .aboutus-statistics__item_5
+    &__item_5 {
+        @media (min-width: 500px) {
+            grid-column: 1 / 3;
+        }
+        @media (min-width: 1000px) {
+            grid-column: 3 / 5;
+        }
+    }
+    // .aboutus-statistics__item-title
+    &__item-title {
+        margin-bottom: $mediumIndent + px;
+    }
+    // .aboutus-statistics__item-text
+    &__item-text {
+        max-width: 200px;
+        margin: 0 auto;
+        @media (min-width: 500px) {
+            max-width: 300px;
+        }
+    }
+}
+
+.aboutus-now {
+    &__title {
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+    }
+    &__items {
+        @extend %grid-3;
+    }
+    &__item {
+        position: relative;
+        @include adaptive-value("padding-top", 30, 20); 
+        @include adaptive-value("padding-bottom", 30, 20); 
+        @include adaptive-value("padding-left", 30, 15); 
+        @include adaptive-value("padding-right", 30, 15); 
+        background-color: #1C182E;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    &__decore-circle-1 {
+        width: 269px;
+        height: 269px;
+        bottom: -144px;
+        left: -115px;
+        filter: blur(40px);
+    }
+    &__decore-circle-2 {
+        width: 334px;
+        height: 334px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(40px);
+    }
+    &__decore-circle-3 {
+        width: 126px;
+        height: 126px;
+        top: 50%;
+        right: -60px;
+        transform: translate(0, -50%);
+        filter: blur(30px);
+    }
+}
+
+
+// Компонент FOOTER ---------------------------------------------------------------------------
+@import 'components/footer';
+
+
+
+
+

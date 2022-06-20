@@ -1,0 +1,142 @@
+
+
+// TITLE ------------------------------------------------------------------------------ 
+.title {
+    max-width: 620px;
+    // .title__text
+    &__text {
+        width: 100%;
+        font-weight: 700;
+        @include adaptive-value("font-size", $bigFS, $mediumFS);
+        line-height: 120%;
+    }
+    // .title__decor
+    &__decor {
+        background: linear-gradient(104.44deg, $mainColorOne 0%, $mainColorTwo 119.94%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $mainColorOne;
+        text-shadow: 0px 10px 30px #351887;
+    }
+}
+
+// TITLE PAGES
+.title-pages {
+    background-color: #1C182E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include adaptive-value("padding-top", $bigIndent, 30);
+    @include adaptive-value("padding-bottom", $bigIndent, 30);
+    padding-left: 15px;
+    padding-right: 15px;
+    @include adaptive-value("margin-top", $bigIndent, 30);
+    // .title-pages__h1
+    &__h1 {
+        font-weight: 700;
+        @include adaptive-value("font-size", $bigFS, $mediumFS);
+        @include adaptive-value("margin-bottom", $mediumIndent, $smallIndent);
+        line-height: 120%;
+    }
+}
+
+// ITEM --------------------------------------------------------------------------------
+.item {
+    position: relative;
+    padding-left: 26px;
+    // .item__title
+    &__title {
+        @include adaptive-value("margin-bottom", 10, 8);
+        font-weight: 700;
+        @include adaptive-value("font-size", $mediumFS, $regularFS);
+        line-height: 120%;
+    }
+    // .item__text
+    &__text {
+        line-height: 140%;
+    }
+    // .item__icon
+    &__icon {
+        position: absolute;
+        @include adaptive-value("top", 6, 3);
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: linear-gradient(94.62deg, $addColorOne 17.38%, $addColorTwo 101.12%), #FFFFFF;
+    }
+}
+
+// BUTTON --------------------------------------------------------------------------------
+.button {
+    display: inline-block;
+    border-radius: 8px;
+    transition: all 0.5s cubic-bezier(0.68, -0.75, 0.265, 1.55) 0s;
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 500;
+        font-size: $smallText;
+        line-height: 140%;
+        padding: 21px 22px;
+    }
+    &_orange {
+        background: linear-gradient(94.62deg, $addColorOne 17.38%, $addColorTwo 101.12%), #FFFFFF;
+        box-shadow: 0px 5px 15px #8E2531;
+    }
+    &_blue {
+        background: #5A33E2;
+        box-shadow: 0px 10px 30px #351887;
+    }
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+// ROBOT --------------------------------------------------------------------------------
+.robot {
+    @extend %card;
+    // .robot__icon
+    &__icon {
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+        img {
+            height: 113px;
+        }
+    }
+    // .robot__title
+    &__title {
+        @include adaptive-value("font-size", 22, $regularFS);
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: $smallIndent + px;
+    }
+    // .robot__description
+    &__description {
+        @include adaptive-value("margin-bottom", 30, $mediumIndent);
+        div {
+            font-size: $smallText + px;
+            color: #B6B6B6;
+        }
+    }
+}
+
+
+// DECORE-CIRCLE -------------------------------------------------------------------------
+.decore-circle {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.decore-circle_blue {
+    background-color: #120FA9;
+}
+
+.decore-circle_orange {
+    background-color: #FE8603;
+}

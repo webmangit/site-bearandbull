@@ -1,0 +1,47 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    font-family: Inter;
+    @include adaptive-value("font-size", $regularFS, $smallText);
+    font-weight: 400;
+    line-height: 140%;
+    color: #ffffff;
+    background-color: $mainBGColor;
+}
+body._lock {
+    overflow: hidden;
+}
+input, button, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}

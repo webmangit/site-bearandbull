@@ -1,0 +1,24 @@
+//  Настроки расположения глобальных элементов страницы -------------------
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.page {
+    flex: 1 1 auto;
+}
+
+//  Настройки контейнеров --------------------------------------------------
+._container {
+    max-width: $maxWidthContainer + px;
+    @include adaptive-value("padding-left", $mediumIndent, $regularIndent);
+    @include adaptive-value("padding-right", $mediumIndent, $regularIndent);
+    margin: 0 auto;
+}
+
+._container-section {
+    @include adaptive-value("padding-top", 70, 35);
+    @include adaptive-value("padding-bottom", 70, 35);
+}

@@ -1,0 +1,87 @@
+
+.faq-intro {
+    &__subtitles {
+        max-width: 524px;
+    }
+}
+
+.spoller {
+    margin: 0 auto;
+    max-width: 760px;
+    // .spoller__block
+    &__block {
+        margin-bottom: 40px;
+    }
+    // .spoller__main-title
+    &__main-title {
+        min-width: 100%;
+        text-align: center;
+        @include adaptive-value("margin-bottom", $bigIndent, $mediumIndent);
+        font-weight: 700;
+        @include adaptive-value("font-size", $bigFS, $mediumFS);
+        line-height: 120%;
+    }
+    // .spoller__main-text
+    &__main-text {
+        background: linear-gradient(104.44deg, $mainColorOne 0%, $mainColorTwo 119.94%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $mainColorOne;
+        text-shadow: 0px 10px 30px #351887;
+    }
+    // .spoller__item
+    &__item {
+        margin: 0px 0px 10px 0px;
+    }
+    // .spoller__title
+    &__title {
+        width: 100%;
+        text-align: left;
+        @include adaptive-value("font-size", 24, 18);
+        font-weight: 700;
+        background-color: transparent;
+        padding: 10px;
+        position: relative;
+        color: #fff;
+        transition: color 0.3s ease 0s;
+    }
+    &__title:hover {
+        color: $addColorOne;
+    }
+    // .spoller__text
+    &__text {
+        padding: 0 10px 10px;
+    }
+}
+
+.spoller._init .spoller__title {
+    padding: 10px 40px 10px 10px;
+    cursor: pointer;
+}
+.spoller._init .spoller__title::before,
+.spoller._init .spoller__title::after {
+    content: "";
+    width: 24px;
+    height: 4px;
+    background-color: $addColorOne;
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transition: transform 0.3s ease 0s;
+}
+.spoller._init .spoller__title::after {
+    transform: rotate(90deg);
+}
+
+.spoller._init .spoller__title._active::after {
+    transform: rotate(45deg);
+    background-color: $addColorTwo;
+}
+.spoller._init .spoller__title._active::before {
+    transform: rotate(-45deg);
+    background-color: $addColorTwo;
+}
+.spoller._init .spoller__title._active {
+    color: $addColorTwo;
+}

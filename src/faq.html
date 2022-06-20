@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title": "Главная страница"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html', {})
+        <main class="page">
+            <section class="faq-intro">
+                <div class="faq-intro__title title-pages">
+                    <h1 class="title-pages__h1">
+                        Частые вопросы
+                    </h1>
+                    <p class="faq-intro__subtitles title-pages__subtitle">
+                        Здесь мы постарались подробно ответить на ваши частозадаваемые вопросы
+                    </p>
+                </div>
+            </section>
+
+            <section class="question">
+                <div class="question__container _container _container-section">
+                    <!-- О роботе -->
+                    <div data-spollers data-one-spoller class="question__spoller spoller">
+                        <div class="spoller__block">
+                            <div class="spoller__main-title">
+                                <h2 class="spoller__main-text">
+                                    О роботе
+                                </h2>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Что такое торговый робот?
+                                </button>
+                                <div class="spoller__text">
+                                    Торговый робот или советник - это специальная программа, которая использует
+                                    заложенную стратегию, выполняя автоматическую работу без участия в торговле
+                                    пользователя.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Нужно ли контролировать работу робота?
+                                </button>
+                                <div class="spoller__text">
+                                    Желательно периодически смотреть за работой роботов из пакета "Агрессивный". Если на
+                                    рынке возникают ситуации где необходимо Ваше участие, об этом будет отражена
+                                    информация в группе Телеграмм. Контроль роботов из пакета "Консервативный" обычно не
+                                    требует контроля.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Какой нужен минимальный депозит для работы робота?
+                                </button>
+                                <div class="spoller__text">
+                                    От 100$ до 500$ , в зависимости от выбранного робота.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Какого робота купить?
+                                </button>
+                                <div class="spoller__text">
+                                    Наши роботы распределены по двум стратегиям: консервативная и агрессивная.
+                                    Определитесь со своей стратегией и выберете подходящего Вам робота или набор.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    В чем преимущество покупки набора роботов вместо покупки одного?
+                                </button>
+                                <div class="spoller__text">
+                                    Во первых: Вы получаете существенную скидку Во вторых: Сразу разбиваете свой депозит
+                                    на несколько частей. Это максимально стабилизирует Ваш инвестиционный портфель.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Какой набор сначала лучше взять агрессивный или консервативный?
+                                </button>
+                                <div class="spoller__text">
+                                    1)Агрессивный набор будет приносить Вам существенно больше прибыли, но риски будут
+                                    больше чем на пассивном. Требуется постоянная фиксация прибыли.
+
+                                    2)Консервативный набор способен дать Вам спокойствие и стабильный долгострочный
+                                    доход ,средства с данных роботов можно не фиксировать.
+
+                                    3)Полный набор обеспечит Вас преимуществами всех наборов.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Выгодно ли класть все средства на одного робота или лучше разбивать на нескольких?
+                                </button>
+                                <div class="spoller__text">
+                                    Правильно распределять депозит между роботами, именно поэтому у нас есть готовые
+                                    пакеты. Таким образом Вы диверсифицируете свои активы.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Почему в торговых системах есть минимально допустимый депозит?
+                                </button>
+                                <div class="spoller__text">
+                                    Портфель любой торговой системы включает в себя волатильные инструменты, которые
+                                    являются основой заработка, но могут давать просадку в процессе торговли. Чтобы
+                                    система показывала общую доходность, необходимо работать по правилам управления
+                                    капиталом. Эти правила и определяют размер минимально допустимого депозита.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Можно ли выводить средства с робота пока сделки не закрыты?
+                                </button>
+                                <div class="spoller__text">
+                                    Можно, но выводя деньги вы подвергаете свой депозит повышенном риску. Вы
+                                    увеличиваете процент просадки по открытым ордерам. Лучше выводить деньги после
+                                    закрытия всех ордеров, либо закрывать ордера принудительно. Выводите деньги когда
+                                    нет открытых ордеров.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Когда робот не работает?
+                                </button>
+                                <div class="spoller__text">
+                                    Робот не работает по выходным в субботу и воскресенье, также в праздничные дни.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Для чего нужен сервер?
+                                </button>
+                                <div class="spoller__text">
+                                    Для прибыльной торговли надо быть подключенным к брокерским серверам постоянно. Для
+                                    этого программа устанавливается на удалённом сервере, который находится в
+                                    дата-центре облачного хостинг-провайдера, или у брокера, или даже на самой бирже и
+                                    работает 24/7.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Как часто нужно оплачивать сервер?
+                                </button>
+                                <div class="spoller__text">
+                                    За сервер нужно платить каждый месяц, либо платить вперед на 3 месяца, 6 месяцев или
+                                    год. При просрочке платежа робот слетает. Пожалуйста контролируйте оплаты, за
+                                    переустановку штраф.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- По приложению -->
+                        <div class="spoller__block">
+                            <div class="spoller__main-title">
+                                <h2 class="spoller__main-text">
+                                    По приложению
+                                </h2>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Что такое MetaTrader?
+                                </button>
+                                <div class="spoller__text">
+                                    MetaTrader — это торговая платформа для Форекса, анализа финансовых рынков и
+                                    использования торговых роботов.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Как мне отслеживать своих роботов на смартфоне?
+                                </button>
+                                <div class="spoller__text">
+                                    С помощью приложения MetaTrader4 или MetaTrader5 в зависимости от типа счета
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Могу ли я видеть несколько счетов по разным роботам в одном приложении?
+                                </button>
+                                <div class="spoller__text">
+                                    Да, в приложении можно просматривать неограниченное количество счетов, и
+                                    переключаться между ними.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Есть два вида приложения MetaTrader4 и MetaTrader5. Какое необходимо скачать?
+                                </button>
+                                <div class="spoller__text">
+                                    Приложение скачивается в зависимости от выбранного робота, типа счета и брокера.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Где можно скачать приложение MetaTrader?
+                                </button>
+                                <div class="spoller__text">
+                                    Google Play, Apple Store
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Что такое SL и TP?
+                                </button>
+                                <div class="spoller__text">
+                                    Take Profit (далее TP) - это значение при котором фиксируется прибыль. По достижению
+                                    определенного значения цены на графике этот ордер срабатывает, и вы закрываете свою
+                                    позицию в прибыль.
+                                    Stop Loss (далее SL) - это, наоборот, "остановка убытка". Это ордер, который
+                                    срабатывает при развороте цены не в нашу сторону, при достижении положительного
+                                    уровня просадки. (более 60% потенциальной прибыли).
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- По брокеру -->
+                        <div class="spoller__block">
+                            <div class="spoller__main-title">
+                                <h2 class="spoller__main-text">
+                                    По брокеру
+                                </h2>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Какой тип счета необходимо открыть у брокера для запуска робота?
+                                </button>
+                                <div class="spoller__text">
+                                    Каждый робот имеет свой тип счета для работы. Более подробная информация отражена во
+                                    вкладке роботы по каждому конкретному продукту.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Есть ли комиссия на пополнение и снятие средств?
+                                </button>
+                                <div class="spoller__text">
+                                    Нет
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Могу ли я пополнить счет сразу долларами?
+                                </button>
+                                <div class="spoller__text">
+                                    Да, для этого выбираем пополнить счет не с помощью Основного провайдера, а используя
+                                    Connectum или Ecommpay для брокера Forex4u либо в разделе "Пополнить счет" брокера
+                                    RoboForex.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Как выводить денежные средства?
+                                </button>
+                                <div class="spoller__text">
+                                    В разделе "Пополнение/снятие" брокера Forex4u или в разделе "Снять Средства" брокера
+                                    RoboForex.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Как быстро приходят деньги на карту после вывода средств?
+                                </button>
+                                <div class="spoller__text">
+                                    До 7 суток, обычно в день вывода средств.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Насколько надежно хранить средства на брокере RoboForex и Forex4u?
+                                </button>
+                                <div class="spoller__text">
+                                    Данные брокеры имеют необходимые лицензии на рынке и работают уже более 11 лет.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Что такое партнерская программа? Как она работает?
+                                </button>
+                                <div class="spoller__text">
+                                    Партнерская программа даст Вам возможность зарабатывать не только со сделок, которые
+                                    проводит Ваш робот, а получать комиссию со сделок Ваших партнеров.
+                                    Действует десятиуровневая программа — получайте вознаграждение за клиентов,
+                                    партнеров и субпартнеров. Получайте % от комиссии за клиентов вплоть до 10 уровня.
+                                    Данная программа работает только по реферальной ссылке.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Как я могу привлечь партнера?
+                                </button>
+                                <div class="spoller__text">
+                                    Партнера можно привлечь по индивидуальной реферальной ссылке, для этого нужно
+                                    создать партнерский счет.
+                                </div>
+                            </div>
+                            <div class="spoller__item">
+                                <button tabindex="-1" type="button" data-spoller class="spoller__title">
+                                    Может ли депозит уйти в минус?
+                                </button>
+                                <div class="spoller__text">
+                                    Нет. Потерять нельзя больше того что лежит на вашем счете.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!-- По брокеру -->
+
+                </div>
+            </section>
+
+
+        </main>
+        @@include('html/footer.html', {})
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
