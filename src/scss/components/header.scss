@@ -84,8 +84,10 @@
         right: -100%;
         z-index: 10;
         padding-top: 80px;
-        @include adaptive-value("padding-left", $mediumIndent, $regularIndent);
-        @include adaptive-value("padding-right", $mediumIndent, $regularIndent);
+        // @include adaptive-value("padding-left", $mediumIndent, $regularIndent);
+        // @include adaptive-value("padding-right", $mediumIndent, $regularIndent);
+        padding-left: 15px;
+        padding-right: 15px;
         transition: right 0.3s ease 0s;
         overflow: auto;
         background-color: #1C182E;
@@ -133,9 +135,9 @@
             display: flex;
             align-items: center;
         }
+        
     }
     &__contacts-icon {
-        margin-right: $smallIndent + px;
         @media (min-width: 1100px) {
             margin-right: $smallIndent + px;
         }

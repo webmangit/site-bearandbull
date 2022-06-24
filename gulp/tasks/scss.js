@@ -31,7 +31,7 @@ export const scss = () => {
       cascade: true
     })))
     // Раскомментировать если нужен не сжатый дубль файла стилей
-    // .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.if(app.isBuild, cleanCss())) // сжимает CSS файл
     .pipe(rename({ extname: '.min.css' })) // меняет scss на min.css
     .pipe(app.gulp.dest(app.path.build.css)) // перенесли файлы в нужную папку, с помощью метода dest()
